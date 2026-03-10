@@ -1,0 +1,4 @@
+.snakemake/
+bnechmarks/
+logs/
+results/
