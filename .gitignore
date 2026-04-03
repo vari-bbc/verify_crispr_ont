@@ -1,4 +1,7 @@
 .snakemake/
-bnechmarks/
+benchmarks/
 logs/
 results/
+resources/
+raw_data/
+separate_assembly/
