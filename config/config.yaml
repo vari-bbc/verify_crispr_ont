@@ -1,0 +1,26 @@
+project_name: Cbp_flox_sheared_SUP #SRCAP_PR001627_C57BL_6J_T2T_v1 #replace w/ sample sheet & modify snakefile to work with this... for now just 1 though?
+
+ref:
+  sequence: /varidata/research/projects/genomicscore/test_runs/Crebbp_flox_COIN_adaptive/adaptive_resources_flox_COIN/flox/GCA_964188535.1_C57BL_6J_T2T_v1_genomic_chrnames_reformed_flox_withplasmid.fa
+  gtf: /varidata/research/projects/bbc/research/SHIX_20251210_ONT_VBCS-1596/verify_crispr_ont_flox_unsheared/GCA_964188535.1_C57BL_6J_T2T_v1.xenoRefGene.gtf
+  genome_size: 2731319101 #"158M"
+  regions_depth_compute: /varidata/research/projects/bbc/research/SHIX_20251210_ONT_VBCS-1596/verify_crispr_ont_flox_unsheared/resources/GCA_964188535.1_C57BL_6J_T2T_v1_genomic_chrnames_reformed_flox_withplasmid_chrs.bed
+  regions_off_targets: /varidata/research/projects/genomicscore/test_runs/Crebbp_flox_COIN_adaptive/adaptive_resources_flox_COIN/flox/chr16_plus_offtargets_flox291and5prime_100kbbuffer.bed
+  sequence_subset: /varidata/research/projects/bbc/research/SHIX_20251210_ONT_VBCS-1596/resources/construct/flox/GCA_964188535.1_C57BL_6J_T2T_v1_genomic_chrnames_reformed_flox_withplasmid_chr16.fa
+
+hapdup:
+  sif: /varidata/research/projects/bbc/research/POSA_20240826_ONT_VBCS-1278/diploid/hapdup_0.12.sif
+  min_aligned_length: 5000 #10k by default
+
+sniffles_repeats: /varidata/research/projects/bbc/research/SHIX_20251210_ONT_VBCS-1596/verify_crispr_ont_flox_unsheared/resources/GCA_964188535.1_C57BL_6J_T2T_v1_genomic_chrnames_reformed_flox_withplasmid_repeats_merged.bed
+
+modules:
+  bedtools: bbc2/bedtools/bedtools-2.30.0
+  deepvariant: bbc2/DeepVariant/deepvariant-1.5.0 
+  htslib: bbc2/htslib/htslib-1.17
+  minimap2: bbc2/minimap2/minimap2-2.26
+  mosdepth: bbc2/mosdepth/mosdepth-0.2.6
+  multiqc: bbc2/multiqc/multiqc-1.28
+  samtools: bbc2/samtools/samtools-1.17
+  seqtk: bbc2/seqtk/seqtk-1.4-r122
+  sniffles: bbc2/sniffles/sniffles-2.2
